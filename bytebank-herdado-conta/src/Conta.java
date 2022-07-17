@@ -7,11 +7,11 @@ public class Conta {
 	
 	public Conta(int agencia, int numero) {
 		Conta.total++;
-		System.out.println("O total de contas é " + Conta.total);
+		//System.out.println("O total de contas é " + Conta.total);
 		this.agencia = agencia;
 		this.numero = numero;
-		this.saldo = 100;
-		System.out.println("Estou criando um conta " + this.numero);
+		//this.saldo = 100;
+		//System.out.println("Estou criando um conta " + this.numero);
 	}
 	
 	public void deposita(double valor) {
@@ -28,8 +28,7 @@ public class Conta {
 	}
 	
 	public boolean transfere(double valor, Conta destino) {
-		if(this.saldo >= valor) {
-			this.saldo -= valor;
+		if(this.saca(valor)) {
 			destino.deposita(valor);
 			return true;
 		}
@@ -46,7 +45,7 @@ public class Conta {
 	
 	public void setNumero(int numero) {
 		if(agencia <= 0) {
-			System.out.println("Numero da conta não pode valor menor igual a 0");
+			//System.out.println("Numero da conta não pode valor menor igual a 0");
 			return;
 		}
 		this.numero = numero;
@@ -58,7 +57,7 @@ public class Conta {
 	
 	public void setAgencia(int agencia) {
 		if(agencia <= 0) {
-			System.out.println("Numero da agencia não pode valor menor igual a 0");
+			//System.out.println("Numero da agencia não pode valor menor igual a 0");
 			return;
 		}
 		this.agencia = agencia;
