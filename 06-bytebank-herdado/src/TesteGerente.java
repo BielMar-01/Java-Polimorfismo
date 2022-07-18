@@ -9,9 +9,9 @@ public class TesteGerente {
 		
 		System.out.println(g1.getNome());
 		
-		g1.setSenha(2222);
-		boolean autentica = g1.autentica(2222);
-		System.out.println(autentica);
+//		g1.setSenha(2222);
+//		boolean autentica = g1.autentica(2222);
+//		System.out.println(autentica);
 		
 		System.out.println(g1.getBonificacao());
 	}
